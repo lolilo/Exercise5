@@ -20,8 +20,6 @@ script, input_file = argv
 in_file = open(input_file)
 indata = in_file.read()
 
-print indata
-
 # count = 0
 # for char in indata:
 #     print char
@@ -39,11 +37,20 @@ letter_count = range(27)
 
 # Set all elements in letter_count to number 0.
 for i in range(len(letter_count)):
+    # index needs to reach 27, i = 27 for the 26th element of the alphabet list
+    # print i
+    # print "length", len(letter_count)
     letter_count[i] = 0
 
 # Counts how many times each letter occurs in indata.
-for i in range(len(indata-1)): 
-    for letter in alphabet: 
-        if ord(indata[i]) == letter:
-            pass
+for i in range(len(indata)): 
     
+    for letter in range(len(alphabet)): 
+        if indata[i] == alphabet[letter]:
+            print indata[i]
+            letter_count[letter] += 1
+
+print letter_count
+
+            
+
