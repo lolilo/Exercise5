@@ -22,13 +22,6 @@ while Valid:
     in_file = open(input_file)
     indata = in_file.read()
 
-    # count = 0
-    # for char in indata:
-    #     print char
-    #     count += 1
-
-    # print count
-
     # Convert all letters to lowercase.
     indata = indata.lower()
     # Create list of alphabet, lowercase. 
