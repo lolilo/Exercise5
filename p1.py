@@ -28,5 +28,10 @@ for letter in alphabet:
     if not os.path.exists(directory):
         os.makedirs(directory)
 
+# 2. Loop through all the files in the original_files directory, 
+# organize each of those files into the directory that their name starts with.
+# ### Example:
+#     The file named 'artichoke.txt' would go into the directory 'a',
+#     'bartholomew.txt' would go into 'b'.
 
-
+# Need to open original_files to look at files within.
