@@ -161,5 +161,8 @@ def join_strings(string_list):
 # print join_strings(['yo', 'ha', 'he', 'ho', 'no'])
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
+# AV = (X1 + X2 + X3...) / X
+
 def average(numbers):
-    return None
+    return float(sum_numbers(numbers))/len(numbers)
+
