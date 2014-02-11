@@ -19,6 +19,7 @@ import os, shutil
 #     ./c/
 #     etc.
 
+# Could also do this with ord(). 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 for letter in alphabet: 
@@ -61,7 +62,8 @@ if isValid:
         # need to change directory to access f
         # os.chdir(input_file)
         # But! We still need to access the letter directory which we were originally working...
-        # print input_file + "/" + f
+        # Placing "./" in front is safer, in case the user inputs something dangerous.
+        # "./" is explicitly the current directory. "./a/" is the same as "a/" or simply "a"
         shutil.move("./" + input_file + "/" + f, f[0])
         print "Success!"
 
